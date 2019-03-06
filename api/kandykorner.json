@@ -1,0 +1,30 @@
+{
+"locations" : [
+    {"id": 1, "name": "Downtown", "address": "1001 17th Street"},
+    {"id": 2, "name": "Midtown", "address": "609 Columbia Avenue"}
+],
+
+"employees": [
+    {"id": 1, "name": "Jen" },
+    {"id": 2, "name": "Sadie"},
+    {"id": 3, "name": "Mary"},
+    {"id": 4, "name": "Stacy"}
+],
+
+"candyTypes": [
+    {"id": 1, "type": "Chocolate"},
+    {"id": 2, "type": "Hard"},
+    {"id": 3, "type": "Chewy"},
+    {"id": 4, "type": "Other"}
+],
+
+"candies": [
+    {"id": 1, "name": "Chocolate Frog", "candyType": "1"},
+    {"id": 2, "name": "Every Flavor Jelly Beans", "candyType": "3"},
+    {"id": 3, "name": "Cherry Bombs", "candyType": "2"},
+    {"id": 4, "name": "Airheads", "candyType": "3"},
+    {"id": 5, "name": "FunDip", "candyType": "4"},
+    {"id": 6, "name": "Lion Bar", "candyType": "1"}
+]
+
+}
