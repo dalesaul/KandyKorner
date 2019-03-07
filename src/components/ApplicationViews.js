@@ -4,6 +4,11 @@ import Locations from "./Locations";
 import Candies from "./CandyList";
 import EmployeeList from './EmployeeList';
 import CandyTypes from './CandyTypes';
+import EmployeesManager from '../modules/EmployeesManager';
+import LocationsManager from '../modules/LocationsManager';
+import CandiesManager from '../modules/CandiesManager';
+import CandyTypesManager from '../modules/CandyTypesManager';
+
 
 class ApplicationViews extends Component{
 
@@ -29,20 +34,19 @@ deleteCandy = id => {
 
 componentDidMount(){
     const newState = {};
-    fetch("http://localhost:5002/employees")
-    .then(employees => employees.json())
+    return EmployeesManager.getAll()
     .then(parsedEmployees => {
       newState.employees = parsedEmployees;
-      return fetch("http://localhost:5002/locations")
-    }).then(locations => locations.json())
+      return LocationsManager.getAll()
+    })
     .then(parsedLocations => {
       newState.locations = parsedLocations;
-      return fetch("http://localhost:5002/candies")
-    }).then(candies => candies.json())
+      return CandiesManager.getAll()
+    })
     .then(parsedCandies => {
       newState.candies = parsedCandies;
-      return fetch("http://localhost:5002/candyTypes")
-    }).then(candyTypes => candyTypes.json())
+      return CandyTypesManager.getAll()
+    })
     .then(parsedCandyTypes => {
       newState.candyTypes = parsedCandyTypes;
       this.setState(newState);

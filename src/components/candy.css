@@ -1,6 +1,7 @@
 .candies {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
 .icon--candy {
@@ -14,7 +15,7 @@
 
 .card-title {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }

@@ -50,12 +50,12 @@
   "candies": [
     {
       "id": 1,
-      "name": "Chocolate Frog",
+      "name": "ChocolateFrog",
       "candyType": "1"
     },
     {
       "id": 3,
-      "name": "Cherry Bombs",
+      "name": "CherryBombs",
       "candyType": "2"
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "id": 6,
-      "name": "Lion Bar",
+      "name": "LionBar",
       "candyType": "1"
     }
   ]
