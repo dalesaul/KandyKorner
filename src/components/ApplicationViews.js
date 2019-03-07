@@ -14,6 +14,19 @@ state = {
     candies: []
 };
 
+deleteCandy = id => {
+  return fetch(`http://localhost:5002/candies/${id}`, {
+    method: "DELETE"
+  })
+  .then(e => e.json())
+  .then(() => fetch(`http://localhost:5002/candies`))
+  .then(e => e.json())
+  .then(candies => this.setState({
+    candies: candies
+  }))
+}
+
+
 componentDidMount(){
     const newState = {};
     fetch("http://localhost:5002/employees")
@@ -49,7 +62,7 @@ render (){
                     return <CandyTypes candyTypes={this.state.candyTypes} />
                 }} />
             <Route exact path="/candies" render={(props) => {
-                    return <Candies candies={this.state.candies} candyTypes={this.state.candyTypes} />
+                    return <Candies deleteCandy={this.deleteCandy} candies={this.state.candies} candyTypes={this.state.candyTypes} />
                 }} />
         </div>
     )
